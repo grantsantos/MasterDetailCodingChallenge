@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/resultListFragment">
+    <fragment
+        android:id="@+id/resultListFragment"
+        android:name="com.masterdetailcodingchallenge.feature_itunes_search.presentation.result_list.ResultListFragment"
+        android:label="item_result"
+        tools:layout="@layout/item_result" >
+        <action
+            android:id="@+id/action_resultListFragment_to_resultDetailFragment"
+            app:destination="@id/resultDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultDetailFragment"
+        android:name="com.masterdetailcodingchallenge.feature_itunes_search.presentation.result_detail.ResultDetailFragment"
+        android:label="fragment_result_detail"
+        tools:layout="@layout/fragment_result_detail" >
+        <argument
+            android:name="result"
+            app:argType="com.masterdetailcodingchallenge.feature_itunes_search.domain.model.Result" />
+    </fragment>
+</navigation>
